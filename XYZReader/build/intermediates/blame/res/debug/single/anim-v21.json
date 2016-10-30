@@ -8,10 +8,6 @@
         "source": "/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/design/25.0.0/res/anim-v21/design_appbar_state_list_animator.xml"
     },
     {
-        "merged": "/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/res/merged/debug/anim-v21/fab_state_list_anim.xml",
-        "source": "/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/src/main/res/anim-v21/fab_state_list_anim.xml"
-    },
-    {
         "merged": "/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
         "source": "/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/design/25.0.0/res/anim-v21/design_bottom_sheet_slide_out.xml"
     }

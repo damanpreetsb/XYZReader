@@ -5,7 +5,7 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="19791106230192"
+    timestamp="20965803550259"
     token="-2668470592724963375"
     verifier="COMPATIBLE" >
 
@@ -27,14 +27,14 @@
         type="RESOURCES" />
 
     <build
-        timestamp="17032088737434"
-        verifier="FULL_BUILD_REQUESTED" >
+        timestamp="20362698035086"
+        verifier="BINARY_MANIFEST_FILE_CHANGE" >
         <artifact
             location="/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/outputs/apk/XYZReader-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="19237273245725"
+        timestamp="20782373163895"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
@@ -50,14 +50,7 @@
             type="DEX" />
     </build>
     <build
-        timestamp="19431400950259"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/builds/debug/19431400950259/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="19791106230192"
+        timestamp="20965803550259"
         verifier="COMPATIBLE" >
         <artifact
             location="/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/instant-run-resources/resources-debug.ir.ap_"

@@ -1,4 +1,4 @@
-#Sun Oct 30 21:07:25 IST 2016
+#Sun Oct 30 22:00:46 IST 2016
 base.0=/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_504e73febc78e9da1866e78184dc66b7a130e21d
 renamed.1=classes.dex
 renamed.0=classes2.dex
