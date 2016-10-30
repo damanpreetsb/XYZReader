@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Oct 30 22:10:39 IST 2016
+#Sun Oct 30 22:12:38 IST 2016
 210.set=ANDROID_RESOURCE
 282.file=/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/res/resources-debug.ap_/res/drawable/padded_divider.xml
 14.set=ANDROID_RESOURCE
