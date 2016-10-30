@@ -1,0 +1,7 @@
+#Sun Oct 30 21:07:25 IST 2016
+base.0=/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_504e73febc78e9da1866e78184dc66b7a130e21d
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_7c863a53b5af4c0f61ff694cb576c27c655f5715/classes.dex
+base.1=/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_7c863a53b5af4c0f61ff694cb576c27c655f5715
+file.0=/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_504e73febc78e9da1866e78184dc66b7a130e21d/classes.dex

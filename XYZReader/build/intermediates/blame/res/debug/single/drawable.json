@@ -32,12 +32,12 @@
         "source": "/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/drawable/abc_seekbar_track_material.xml"
     },
     {
-        "merged": "/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
-        "source": "/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/drawable/notification_bg.xml"
-    },
-    {
         "merged": "/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/abc_ic_menu_overflow_material.xml",
         "source": "/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/drawable/abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
+        "source": "/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/drawable/notification_bg.xml"
     },
     {
         "merged": "/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
@@ -102,6 +102,10 @@
     {
         "merged": "/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
         "source": "/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/drawable/abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/scrim_gradient.xml",
+        "source": "/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/src/main/res/drawable/scrim_gradient.xml"
     },
     {
         "merged": "/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",
