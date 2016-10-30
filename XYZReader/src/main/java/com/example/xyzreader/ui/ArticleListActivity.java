@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.Loader;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
@@ -16,6 +17,8 @@ import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.graphics.Palette;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
@@ -28,6 +31,8 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.widget.TextView;
 
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.ImageLoader;
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
 import com.example.xyzreader.data.ItemsContract;
@@ -141,8 +146,7 @@ public class ArticleListActivity extends ActionBarActivity implements
      */
     public Action getIndexApiAction() {
         Thing object = new Thing.Builder()
-                .setName("ArticleList Page") // TODO: Define a title for the content shown.
-                // TODO: Make sure this auto-generated URL is correct.
+                .setName("ArticleList Page")
                 .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
                 .build();
         return new Action.Builder(Action.TYPE_VIEW)
@@ -153,6 +157,7 @@ public class ArticleListActivity extends ActionBarActivity implements
 
     private class Adapter extends RecyclerView.Adapter<ViewHolder> {
         private Cursor mCursor;
+        private int mMutedColor = 0xFF333333;
 
         private Adapter(Cursor cursor) {
             mCursor = cursor;
@@ -173,12 +178,8 @@ public class ArticleListActivity extends ActionBarActivity implements
                 public void onClick(View view) {
 
                     Uri uri = ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()));
-//                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-//                        enterReveal(view, uri);
-//                    } else {
                     startActivity(new Intent(Intent.ACTION_VIEW, uri));
                     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-//                    }
 
                 }
             });
@@ -186,7 +187,7 @@ public class ArticleListActivity extends ActionBarActivity implements
         }
 
         @Override
-        public void onBindViewHolder(ViewHolder holder, int position) {
+        public void onBindViewHolder(final ViewHolder holder, int position) {
             mCursor.moveToPosition(position);
             holder.titleView.setText(mCursor.getString(ArticleLoader.Query.TITLE));
             holder.subtitleView.setText(
@@ -199,6 +200,24 @@ public class ArticleListActivity extends ActionBarActivity implements
             holder.thumbnailView.setImageUrl(
                     mCursor.getString(ArticleLoader.Query.THUMB_URL),
                     ImageLoaderHelper.getInstance(ArticleListActivity.this).getImageLoader());
+            ImageLoaderHelper.getInstance(ArticleListActivity.this).getImageLoader()
+                    .get(mCursor.getString(ArticleLoader.Query.PHOTO_URL), new ImageLoader.ImageListener() {
+                        @Override
+                        public void onResponse(ImageLoader.ImageContainer imageContainer, boolean b) {
+                            Bitmap bitmap = imageContainer.getBitmap();
+                            if (bitmap != null) {
+                                Palette p = Palette.generate(bitmap, 12);
+                                mMutedColor = p.getDarkMutedColor(0xFF333333);
+                                holder.thumbnailView.setImageBitmap(imageContainer.getBitmap());
+                                holder.cardView.setBackgroundColor(mMutedColor);
+                            }
+                        }
+
+                        @Override
+                        public void onErrorResponse(VolleyError volleyError) {
+                            volleyError.printStackTrace();
+                        }
+                    });
             holder.thumbnailView.setAspectRatio(mCursor.getFloat(ArticleLoader.Query.ASPECT_RATIO));
             holder.titleView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Roboto-Regular.ttf"));
             holder.subtitleView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Roboto-Regular.ttf"));
@@ -214,12 +233,14 @@ public class ArticleListActivity extends ActionBarActivity implements
         private DynamicHeightNetworkImageView thumbnailView;
         private TextView titleView;
         private TextView subtitleView;
+        private CardView cardView;
 
         private ViewHolder(View view) {
             super(view);
             thumbnailView = (DynamicHeightNetworkImageView) view.findViewById(R.id.thumbnail);
             titleView = (TextView) view.findViewById(R.id.article_title);
             subtitleView = (TextView) view.findViewById(R.id.article_subtitle);
+            cardView = (CardView) view.findViewById(R.id.card_view);
         }
     }
 
@@ -231,7 +252,6 @@ public class ArticleListActivity extends ActionBarActivity implements
         int midHeight = view.getHeight() / 2;
         int endRadius = (int) Math.hypot(midHeight, midWidth);
         Animator anim = ViewAnimationUtils.createCircularReveal(view, midWidth, midHeight, 0, endRadius);
-//        view.setVisibility(View.VISIBLE);
         anim.addListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animator) {

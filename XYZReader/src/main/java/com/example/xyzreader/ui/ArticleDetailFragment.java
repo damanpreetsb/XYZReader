@@ -182,6 +182,7 @@ public class ArticleDetailFragment extends Fragment implements
                                 mMutedColor = p.getDarkMutedColor(0xFF333333);
                                 toolbarImage.setImageBitmap(imageContainer.getBitmap());
                                 bylineView.setBackgroundColor(mMutedColor);
+                                collapsingToolbarLayout.setContentScrimColor(mMutedColor);
                             }
                         }
 

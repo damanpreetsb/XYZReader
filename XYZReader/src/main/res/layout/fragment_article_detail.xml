@@ -18,7 +18,6 @@
             android:background="@color/photo_placeholder"
             app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
             app:contentScrim="@color/theme_primary"
-            app:expandedTitleMarginStart="72dp"
             app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 

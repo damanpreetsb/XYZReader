@@ -5,38 +5,26 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="18631580556105"
+    timestamp="19791106230192"
     token="-2668470592724963375"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="893" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="128" />
+        duration="0" />
     <task
         name="verifier"
-        duration="3" />
+        duration="0" />
 
     <artifact
         location="/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
         type="RESOURCES" />
-    <artifact
-        location="/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-        type="DEX" />
-    <artifact
-        location="/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
-        type="DEX" />
-    <artifact
-        location="/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
-        type="DEX" />
-    <artifact
-        location="/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
-        type="DEX" />
 
     <build
         timestamp="17032088737434"
@@ -46,11 +34,8 @@
             type="MAIN" />
     </build>
     <build
-        timestamp="18631580556105"
+        timestamp="19237273245725"
         verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-            type="RESOURCES" />
         <artifact
             location="/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
             type="DEX" />
@@ -63,6 +48,20 @@
         <artifact
             location="/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
             type="DEX" />
+    </build>
+    <build
+        timestamp="19431400950259"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/builds/debug/19431400950259/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="19791106230192"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/home/daman/AndroidStudioProjects/udacity/xyzreader/XYZReader/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>

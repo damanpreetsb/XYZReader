@@ -14,6 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#333"
+        android:paddingStart="32dp"
+        android:paddingLeft="32dp"
         android:padding="@dimen/default_padding"
         android:textColor="#8fff" />
 
